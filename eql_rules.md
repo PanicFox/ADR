@@ -1,3 +1,6 @@
+# Reference
+https://www.elastic.co/docs/reference/query-languages/eql/eql-syntax
+
 # Rule to detect Claude tool usage on accept
 
 ```
