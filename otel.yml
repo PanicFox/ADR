@@ -1,0 +1,17 @@
+receivers:
+  otlp:
+   protocols:
+     grpc:
+exporters:
+  # Exporter to send logs and metrics to Elasticsearch
+  elasticsearch/otel:
+    endpoints: [ "http://localhost:9200" ]
+    api_key: <API_KEY>
+    mapping:
+      mode: otel
+service:
+  pipelines:
+    logs/platformlogs:
+      receivers: [otlp]
+      exporters: [elasticsearch/otel]
+
